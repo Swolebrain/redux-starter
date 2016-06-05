@@ -15,12 +15,16 @@ describe('Reducer', () => {
     expect().to.equal()
   })
 
-  it('', ()=>{
-    expect().to.equal()
+  it('handles INCREMENT', ()=>{
+    const action = {type: "INCREMENT"}
+    const nextState = reducer(state, action)
+    expect(nextState).to.equal(fromJS({currentNumber: 1}))
   })
 
-  it('', ()=>{
-    expect().to.equal()
+  it('handles DECREMENT', ()=>{
+    const action = {type: "DECREMENT"}
+    const nextState = reducer(state, action)
+    expect(nextState).to.equal(fromJS({currentNumber: -1}))
   })
 
   it('', ()=>{
